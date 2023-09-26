@@ -4,126 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>to do list</title>
-    <!--fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
-    <!--fonts-->
+    <!--FontAwesome CSS Link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    
+    <!--Bootstrap Link-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="./index.css">
+
+    <!--CSS file Link-->
+    <link rel="stylesheet" href="./index.css">   
     
 </head>
 <body>
     
+    <!-- Container for the To-Do List -->
     <div class="container">
+        <!-- Title of the To-Do List -->
         <h1 class="pb-4">To-Do-List</h1>
-        <div class="box">
-           <input placeholder="write here..." class="text" >
-           <!-- <button class="btn ">ADD</button> -->
-        </div>
+        <!-- Input field for adding tasks -->
+        <input placeholder="write here..." class="text">
+        <!-- Task list container -->
         <div class="task-list">
-           <ul class="py-4 fs-3"></ul>
+            <!-- Unordered list for displaying tasks -->
+            <ul class="py-4 fs-3"></ul>
         </div>
     </div>
 
+    <!--JavaScript file Link-->
+    <script src="./index.js" charset="UTF-8"></script>
 
-
-<!--     <script src="./index.js" charset="UTF-8"></script>
- -->    
-
- <script>
-
-    let inp = document.querySelector("input");
-    /* let btn = document.querySelector("button"); */
-    let list = document.querySelector(".task-list ul");
-
-    inp.addEventListener("keydown", function(event){
-        if(event.key == "Enter"){
-            if(inp.value == ""){
-        alert("please write a task");
-    }
-    else{
-    
-    let task = document.createElement("ul");
-    let dlt  = document.createElement("button");
-    let checkbox = document.createElement("button");
-
-    /* checkbox.type="checkbox"; */
-    task.innerHTML = inp.value;
-    dlt.innerHTML = "DELETE";
-
-    list.appendChild(task);
-    task.appendChild(checkbox);
-    task.appendChild(dlt);
-
-    checkbox.classList.add("task-checkbox");
-    dlt.classList.add("dlt");
-    task.classList.add("task");
-
-
-
-    inp.value="";
-
-    dlt.addEventListener("click" , function(){
-        dlt.parentElement.remove();
-    });
-
-    task.addEventListener("click", function(){
-        task.classList.toggle("task-complete");
-        checkbox.classList.toggle("task-checkbox-tick");
-    })
-    }
-    }
-})
-    
-    /* btn.addEventListener("click", function () {
-    if(inp.value == ""){
-        alert("please write a task");
-    }
-    else{
-    
-
-    
-    let task = document.createElement("li");
-    let dlt  = document.createElement("button");
-
-    task.innerHTML = inp.value;
-    dlt.innerHTML = "DELETE";
-
-    list.appendChild(task);
-    task.appendChild(dlt);
-
-    dlt.classList.add("dlt");
-    task.classList.add("task");
-
-
-
-    inp.value="";
-
-    dlt.addEventListener("click" , function(){
-        dlt.parentElement.remove();
-    });
-}
-}); */
-
-    
-
- </script>
 </body>
 </html>

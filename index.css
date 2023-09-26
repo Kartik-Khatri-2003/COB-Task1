@@ -1,29 +1,34 @@
-body{
-    
+/* Styling for the body element */
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgb(42, 62, 62);
+    background-image: url("./images/Untitled\ design\ \(9\).jpg");
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center ;
 }
 
-.container{
-    
+/* Styling for the main container */
+.container {
     position: relative;
     height: 550px;
     width: 500px;
     padding: 30px 50px;
-    border-radius: 30px;
-    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25) , 
-    10px 10px 70px rgba(0, 0, 0, 0.25) ,
-    inset 5px 5px 10px rgba(0, 0, 0, 0.5) ,
-    inset 5px 5px 20px rgba(255, 255, 255, 0.2),
-    inset -5px -5px 15px rgba(0, 0, 0, 0.75);
-    ;
+    border-radius: 15px;
+    /* Box shadow for a 3D effect */
+    box-shadow: 25px 25px 75px rgba(255, 255, 255, 0.25), 
+                10px 10px 70px rgba(151, 86, 216, 0.25),
+                inset 5px 5px 10px rgba(159, 119, 222, 0.5),
+                inset 5px 5px 20px rgba(122, 94, 234, 0.2),
+                inset -5px -5px 15px rgba(181, 115, 216, 0);
+    background: transparent;
+    backdrop-filter: blur(15px);
 }
 
-
-h1{
+/* Styling for the title */
+h1 {
     margin-top: 0px;
     margin-bottom: 0px;
     padding-bottom: 0px;
@@ -34,13 +39,8 @@ h1{
     font-size: 50px;
 }
 
-.box{
-    display: flex;
-    justify-content:space-around;
-    gap: 100px;
-    
-}
-.text{
+/* Styling for the input field */
+.text {
     font-family: 'Patrick Hand', cursive;
     font-weight: 600;
     font-size: 25px;
@@ -48,110 +48,108 @@ h1{
     border: none;
     outline: none;
     padding: 1px 15px ;
-    border-radius: 30px;
-    
+    border-radius: 30px;   
 }
 
-/* .btn{
-    font-family: 'Anton', sans-serif;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 30px;
-    border: none;
-    outline: none;
-    background-color: white;
-    font-size: larger;
-} */
-
-.btn:hover  {
-    background-color:rgb(194, 226, 255);
-}
-.dlt:hover{
-    color: black;
-    background-color:rgb(194, 226, 255);
-}
-
-.task-list{
-    /* position: relative; */
+/* Styling for the task list container */
+.task-list {
     margin-top: 20px;
     max-height: 325px;
     overflow-y: auto;
     overflow-x: hidden;
-    /* padding-right: 50px; */
 }
 
-
-.task{
+/* Styling for individual tasks */
+.task {
     display: flex;
     align-items: center;
     position: relative;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    width: 250px;
+    width: 270px;
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
     padding: 0px 10px;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
     border-radius: 30px;
-    
-    
+}
 
-}
-.task-complete{
+/* Styling for completed tasks */
+.task-complete {
     text-decoration: line-through;
-    background-color: gray;
-    
+    background-color:rgb(23, 103, 183);
 }
-.task-checkbox{
-    background-color: black;
+
+/* Styling for task checkboxes */
+.task-checkbox {
+    background-color: white;
     width: 25px;
     height: 25px;
     position: absolute;
-    right: 255px;
+    right: 277px;
     border-radius: 50%;
     border: none;
     outline: none;
 }
 
-.task-checkbox-tick::before{
+/* Styling for the checkmark inside task checkboxes */
+.task-checkbox-tick::before {
     content: "\2713";
-    color: aliceblue;
+    color: black;
     font-size: 20px;
     position: absolute;
     top: 0px;
     right: 5px;
-    /* content: '';
-    position: absolute;
-    right: 6px;
-    top: 8px;
-    width: 12px;
-    height: 6px;
-    border-left: 2px solid white;
-    border-bottom: 2px solid white;
-    transform: rotate(315deg); */
-}
-.dlt{
-    position: absolute; 
-    left: 275px;
-    font-size: 1.2rem;
-    padding: 6px 15px;
-    border-radius: 30px;
-    border: none;
-    outline: none;
-    background-color: black;
-    color: white;
-    font-family: 'Patrick Hand', cursive;
-    
 }
 
-::-webkit-scrollbar{
+/* Styling for task delete buttons */
+.dlt {
+    position: absolute; 
+    left: 295px;
+    font-size: 1.1rem;
+    padding: 6px 15px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: rgba(55, 78, 103, 0.402);
+    color: rgb(0, 0, 0);
+    font-family: 'Patrick Hand', cursive;
+    transition: all .3s ;
+    font-weight: bold;
+}
+
+/* Hover effect for task delete buttons */
+.dlt:hover {
+    color: rgb(255, 255, 255);
+    background-color:rgb(106, 7, 245);
+    font-size: 1.3rem;
+}
+
+/* Styling for scrollbars */
+::-webkit-scrollbar {
     width: 5px;
 }
-::-webkit-scrollbar-thumb{
-    background: black;
-    
+
+/* Styling for scrollbar thumbs */
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
 }
-::-webkit-scrollbar-track{
-    background-color: aliceblue;
+
+/* Styling for scrollbar tracks */
+::-webkit-scrollbar-track {
+    background-color: rgb(54, 46, 139);
+}
+
+/* Media query for screens with a maximum width of 500px */
+@media screen and (max-width:500px) {
+
+    .task{
+        margin-bottom: 10px;
+    }
+    .dlt {
+        position: absolute; 
+        left: 227px;
+        background-color: rgb(28, 61, 95)
+    }
 }
 
